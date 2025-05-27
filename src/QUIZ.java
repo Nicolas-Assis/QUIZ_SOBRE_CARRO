@@ -71,6 +71,8 @@ public class QUIZ {
         q3.isCorreta(respostaUsuario3);
         if (q3.isCorreta(respostaUsuario3))
             contador = contador + 1;
+        taxa_de_acerto = (contador * 100) /15;
+
         System.out.println("------------------------------------------------------------------------");
 
         Questao q4 = new Questao();
@@ -94,7 +96,10 @@ public class QUIZ {
 
         System.out.println("------------------------------------------------------------------------");
 
+
         Questao q5 = new Questao();
+        q5.pergunta = "5): Quem é considerado o inventor do primeiro automóvel movido a gasolina?";
+        q5.opcaoA = "A) Henry Ford";
         q5.opcaoB = "B) Karl Benz";
         q5.opcaoC = "C) Nikolaus Otto";
         q5.opcaoD = "D) Gottlieb Daimler";
@@ -114,9 +119,11 @@ public class QUIZ {
         System.out.println("------------------------------------------------------------------------");
 
         Questao q6 = new Questao();
-        System.out.println("------------------------------------------------------------------------");
-
-        Questao q6 = new Questao();
+        q6.pergunta = "6): Em que ano foi lançado o Ford Model T, o primeiro carro produzido em massa?";
+        q6.opcaoA = "A) 1915";
+        q6.opcaoB = "B) 1920";
+        q6.opcaoC = "C) 1895";
+        q6.opcaoD = "D) 1908";
         q6.opcaoE = "E) 1910";
         q6.correta = "D";
 
@@ -135,9 +142,11 @@ public class QUIZ {
         Questao q7 = new Questao();
         q7.pergunta = "7): Qual foi o primeiro carro esportivo da Ferrari?";
         q7.opcaoA = "A) Ferrari 250 GTO";
-        System.out.println("------------------------------------------------------------------------");
-
-        Questao q7 = new Questao();
+        q7.opcaoB = "B) Ferrari Dino";
+        q7.opcaoC = "C) Ferrari Testarossa";
+        q7.opcaoD = "D) Ferrari LaFerrari";
+        q7.opcaoE = "E) Ferrari 125 S";
+        q7.correta = "E";
 
         q7.escrevaQuestao();
         // lendo a resposta do usuario
@@ -156,9 +165,11 @@ public class QUIZ {
         q8.opcaoA = "A) Ferrari";
         q8.opcaoB = "B) Bentley";
         q8.opcaoC = "C) Tesla";
-        System.out.println("------------------------------------------------------------------------");
+        q8.opcaoD = "D) Rolls-Royce";
+        q8.opcaoE = "E) Lexus";
+        q8.correta = "B";
 
-        Questao q8 = new Questao();
+        q8.escrevaQuestao();
         // lendo a resposta do usuario
         String respostaUsuario8 = q8.leiaResposta();
 
@@ -177,9 +188,12 @@ public class QUIZ {
         q9.opcaoB = "B) Chevrolet Corvette";
         q9.opcaoC = "C) Porsche 911";
         q9.opcaoD = "D) Mazda MX-5 Miata";
-        System.out.println("------------------------------------------------------------------------");
+        q9.opcaoE = "E) Dodge Challenger";
+        q9.correta = "D";
 
-        Questao q9 = new Questao();
+        q9.escrevaQuestao();
+        // lendo a resposta do usuario
+        String respostaUsuario9 = q9.leiaResposta();
 
 
         q9.isCorreta(respostaUsuario);
@@ -199,9 +213,11 @@ public class QUIZ {
         q10.correta = "D";
 
         q10.escrevaQuestao();
-        System.out.println("------------------------------------------------------------------------");
+        // lendo a resposta do usuario
+        String respostaUsuario10 = q10.leiaResposta();
 
-        Questao q10 = new Questao();
+
+        q10.isCorreta(respostaUsuario10);
         if (q10.isCorreta(respostaUsuario10))
             contador = contador + 1;
         taxa_de_acerto = (contador * 100) /15;
@@ -220,9 +236,11 @@ public class QUIZ {
         q11.escrevaQuestao();
         // lendo a resposta do usuario
         String respostaUsuario11 = q11.leiaResposta();
-        System.out.println("------------------------------------------------------------------------");
 
-        Questao q11 = new Questao();
+
+        q11.isCorreta(respostaUsuario11);
+        if (q11.isCorreta(respostaUsuario11))
+            contador = contador + 1;
         taxa_de_acerto = (contador * 100) /15;
 
         System.out.println("------------------------------------------------------------------------");
@@ -241,9 +259,11 @@ public class QUIZ {
         String respostaUsuario12 = q12.leiaResposta();
 
 
-        System.out.println("------------------------------------------------------------------------");
+        q12.isCorreta(respostaUsuario12);
+        if (q12.isCorreta(respostaUsuario12))
+            contador = contador + 1;
+        taxa_de_acerto = (contador * 100) /15;
 
-        Questao q12 = new Questao();
         System.out.println("------------------------------------------------------------------------");
 
         Questao q13 = new Questao();
@@ -262,9 +282,11 @@ public class QUIZ {
 
         q13.isCorreta(respostaUsuario13);
         if (q13.isCorreta(respostaUsuario13))
+            contador = contador + 1;
+        taxa_de_acerto = (contador * 100) /15;
+
         System.out.println("------------------------------------------------------------------------");
 
-        Questao q13 = new Questao();
         Questao q14 = new Questao();
         q14.pergunta = "14): Qual carro ficou famoso como Herbie nos filmes??";
         q14.opcaoA = "A) Mini Cooper";
@@ -283,9 +305,11 @@ public class QUIZ {
         if (q14.isCorreta(respostaUsuario14))
             contador = contador + 1;
         taxa_de_acerto = (contador * 100) /15;
+
         System.out.println("------------------------------------------------------------------------");
 
-        Questao q14 = new Questao();
+        Questao q15 = new Questao();
+        q15.pergunta = "15): Em que país foi fundada a montadora Volvo?";
         q15.opcaoA = "A) Alemanha";
         q15.opcaoB = "B) Suíça";
         q15.opcaoC = "C) Suécia";
@@ -306,11 +330,11 @@ public class QUIZ {
 
         System.out.println("------------------------------------------------------------------------");
 
-        Questao q15 = new Questao();
+        double taxa_de_erro = (15 - contador);
+        System.out.println("Parebéns você acertou: " + contador + " questões");
+        System.out.println("Questões erradas: " + taxa_de_erro + " questões");
         System.out.printf("Sua taxa de acerto foi de: %.2f%%\n", taxa_de_acerto);
 
 
     }
 }
-        double taxa_de_acerto = (contador * 100) / 15;
-        double taxa_de_erro = (15 - contador);

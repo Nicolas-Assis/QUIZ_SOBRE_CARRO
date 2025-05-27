@@ -25,8 +25,9 @@
             }
         }
 
+        private static final Scanner ler = new Scanner(System.in);
+
         public String leiaResposta() {
-            Scanner ler = new Scanner(System.in);
             String resp;
             do {
                 System.out.println("Digite a resposta: ");
